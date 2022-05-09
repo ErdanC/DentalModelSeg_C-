@@ -1,2 +1,4 @@
-# DentalModelSeg_C-
-This is the project for dental model segmentation based on C++
+# CrownSegmentation
+Segment dental crown from dental scanning
+
+See install guide.txt

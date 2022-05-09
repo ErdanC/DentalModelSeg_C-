@@ -1,0 +1,48 @@
+1.git clone git@github.com:acThunder/CrownSegmentation.git
+
+2.Visual Studio 2015 community 
+
+3.unzip everything in the DentalLibs folder
+
+4.enviromental path:
+
+TLIBIGL_DIR: D:\CodeLibrary\libigl_new
+TLIBIGL_INCLDUEDIR: D:\CodeLibrary\libigl_new\include
+TOPEN_MESH_DIR: D:\CodeLibrary\OpenMesh_6_3
+TOPENCV_DIR: D:\CodeLibrary\opencv310\build\install
+TQGLVIEWER_DIR: D:\CodeLibrary\libQGLViewer-2.6.4_vs2015
+TQTDIR: D:\CodeLibrary\QT_5_7\5.7\msvc2015_64
+TCGAL_DIR: D:\CodeLibrary\CGAL4.9
+TCGAL_BUILD: D:\CodeLibrary\CGAL4.9\winbuild64
+TEIGEN_ROOT: D:\CodeLibrary\eigen3_3
+BOOST_DIR: D:\CodeLibrary\boost_1_62_0_vs2015
+BOOST_INCLUDEDIR: D:\CodeLibrary\boost_1_62_0_vs2015
+BOOST_LIBRARYDIR: D:\CodeLibrary\boost_1_62_0_vs2015\lib64-msvc-14.0
+pybind11_DIR:D:\CodeLibrary\pybind11\
+PYTHON_DIR: C:\Users\NolenChen\AppData\Local\Programs\Python\Python35
+TANN_DIR: D:\CodeLibrary\ann_1.1.2
+
+D:\CodeLibrary\boost_1_62_0_vs2015\lib64-msvc-14.0
+D:\CodeLibrary\CGAL4.9\winbuild64\bin
+D:\CodeLibrary\CGAL4.9\auxiliary\gmp\lib
+D:\CodeLibrary\OpenMesh_6_3
+D:\CodeLibrary\opencv310\build\bin\Release
+
+
+5.install/reinstall cmake
+
+6.install python
+python -m pip install --upgrade pip
+  pip install Flask
+  pip install gunicorn
+  pip install greenlet
+  pip install eventlet
+  pip install gevent
+  pip install flask_cors
+
+7.copy imageformats 
+
+
+
+deployqt
+windeployqt CrownSegmentation.exe
