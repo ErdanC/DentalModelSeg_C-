@@ -1,0 +1,2 @@
+export FLASK_APP=./crown_segmentation_server.py
+python3 -m flask run

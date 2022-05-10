@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style type="text/css">
+        .no-close .ui-dialog-titlebar {
+            display: none;
+        }
+
+        body {
+            margin: 0;
+        }
+
+
+        #left {
+            width: 65%;
+            height: 100%;
+        }
+
+        #right {
+            width: 35%;
+            height: 100%;
+        }
+
+        #left, #right {
+            float: left;
+        }
+    </style>
+
+    <script src="http://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+    <link href="css/jquery-ui.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="css/jquery-ui.theme.min.css" rel="stylesheet" type="text/css" media="all">
+
+    <script src="scripts/threejs/three.min.js"></script>
+    <script src="scripts/threejs/stats.min.js"></script>
+    <script src="scripts/threejs/TrackballControls.js"></script>
+    <script src="scripts/threejs/OrbitControls.js"></script>
+
+    <script src="scripts/threejs/STLLoader.js"></script>
+    <script src="scripts/threejs/OBJLoader.js"></script>
+    <script src="scripts/threejs/MTLLoader.js"></script>
+    <script src="scripts/threejs/DDSLoader.js"></script>
+    <script src="scripts/threejs/FileSaver.js"></script>
+    <script src="scripts/libs/jquery-3.1.0.min.js"></script>
+    <script src="scripts/libs/jquery-ui.min.js"></script>
+
+    <script src="scripts/cMeshObject.js"></script>
+    <script src="scripts/config.js"></script>
+    <script src="scripts/requests.js"></script>
+    <script src="scripts/tools/cLandmarkTool.js"></script>
+    <script src="scripts/tools/cCrownSegTool.js"></script>
+    <script src="scripts/tools/cManipulationTool.js"></script>
+    <script src="scripts/threejs/STLExporter.js"></script>
+    <script src="scripts/cToolManager.js"></script>
+    <script src="scripts/cScene.js"></script>
+    <script src="scripts/CViewer.js"></script>
+
+    <script src="scripts/cToolManager.js"></script>
+
+    <script src="scripts/crownSegmentation.js"></script>
+</head>
+
+<body style="overflow:hidden;margin:0;height: 100%;">
+
+    <script>
+        $(document).ready(function()
+        {
+          //  $('#upload-file-btn').click(function () {
+
+              //  InitCrownSeg('webgl_container').Init('https://drive.google.com/uc?authuser=0&id=0B2QfHQNp_Zw0aGZzck95WFlmRDQ&export=download', function () {
+                InitCrownSeg('webgl_container').Init('https://drive.google.com/uc?authuser=0&id=0B0O0P3OSOBNvZGxBbGkxZ3pBaVE&export=download', function () {
+                alert('init successfully');
+                });
+            //
+
+       // });
+
+
+
+
+        });
+
+
+    </script>
+
+
+
+    <form id='stl_uploader' method="post" enctype=multipart/form-data>
+
+
+
+        <!-- <input type="text" id="outfileName" placeholder="Enter file name">-->
+        <input id="stlfile" name="stlfile" type="file" />
+        <button id="upload-file-btn" type="button">load</button>
+    </form>
+    <br />
+    <label for="landmark_file">Select a landmark file</label>
+    <input id="landmark_file" type="file">
+
+
+
+
+
+
+
+    <br />
+    <div id="webgl_container" style="width:100%;height:100%;"></div>
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,43 @@
+﻿<!DOCTYPE html>
+<html lang="en" style="height: 100%;">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+   
+    <script src="http://54.157.211.98:80/CrownSegUI/scripts/libs/jquery-3.1.0.min.js"></script>
+    <script src="http://54.157.211.98:80/CrownSegUI/scripts/config.js"></script>
+    <script src="http://54.157.211.98:80/CrownSegUI/scripts/crownSegmentation.js"></script>
+  
+</head>
+
+<body  style="overflow:hidden;margin:0;height: 100%;" >
+    
+    <script>
+        $(document).ready(function()
+        {
+			var segAlg= InitCrownSeg('webgl_container');
+           $('#upload-file-btn').click(function () {
+				var file_url='http://i.cs.hku.hk/~nlchen/LowerJaw1.stl';//should be replaced by your own 'stl' file url
+                segAlg.Init(file_url, function () {
+				//If the crown is loaded successfully the callback function will be executed
+                    alert('init successfully');
+                });
+            });
+			 $('#get-result-btn').click(function () {//get segmentation result
+                var dental_model=segAlg.GetSegmentationResult();
+				console.log('get segmentation result');
+               });
+         
+          
+        });
+    </script>
+ 
+    
+    <button id="upload-file-btn" type="button">Upload</button>
+	 <button id="get-result-btn" type="button">GetSegmentationResult</button>
+    <br/>
+    <div id="webgl_container" style="width:100%;height:100%;"></div>
+         
+
+</body>
+</html>
